@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color:  #333333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color:  #333333 ;
+    text-decoration: none;
+}
+footer {
+    background-color:  #333333 ;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#page-container {
+    margin: 5%;
+}
+
+.container {
+    display: flex;
+}
+
+.nombre, .datos-personales {
+    margin-bottom: 20px;
+}
+
+.experiencia {
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    border: PowderBlue 5px solid;
+}
+.datos{
+    border-radius: 20px;
+    border: PowderBlue 5px solid;
+}
+
+.datos, .fotografia {
+    flex: 1; /* Ocuparán todo el espacio disponible */
+      padding: 20px;
+      box-sizing: border-box; /* Incluir el padding y el border en el tamaño total */
+      margin-right: 20px;
+}
+
+.inner-block {
+    margin-bottom: 10px;
+  }
+
+.lenguajes,.idiomas {
+      flex: 1; /* Ocuparán todo el espacio disponible */
+      border: PowderBlue 5px solid;
+      border-radius: 20px;
+      padding: 20px;
+      box-sizing: border-box; /* Incluir el padding y el border en el tamaño total */
+      margin-right: 20px; /* Espacio entre bloques */
+}
+  
+.idiomas {
+    margin-right: 0; /* Eliminar el margen derecho del último bloque */
+}
+  
+.fotografia {
+    display: flex; /* Utilizamos flexbox para centrar la imagen */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.fotografia img {
+    max-width: 100%; /* Aseguramos que la imagen no exceda el ancho del contenedor */
+    display: block; /* Aseguramos que la imagen sea un elemento de bloque */
+}
+
+
+  
+  
