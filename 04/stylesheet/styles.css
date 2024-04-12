@@ -1,0 +1,12 @@
+img {
+    height: 200px;
+
+}
+main{
+    display: flex;
+    margin: 10%;
+
+}
+#heroe{
+    flex: 1;
+}

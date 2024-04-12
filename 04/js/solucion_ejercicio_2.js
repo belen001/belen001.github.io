@@ -1,0 +1,71 @@
+//Ejercicio de práctica Javascript
+
+// Héroe ataca al presionar tecla x
+// Lime ataca al presionar tecla n
+// El valor de los ataques son random
+// Actualizar barra de progreso cada vez que se hace un ataque
+// mostrar datos de personaje víctima al ser atacado
+
+//Objeto base para los personajes
+class Character {
+  constructor(name, health, damage) {
+    //Atributos
+    this.name = name;
+    this.health = health;
+    this.maxhealth = health;
+    this.damage = damage;
+  }
+  //Verifica si el personaje esta vivo
+  isAlive() {
+    return this.health > 0;
+  }
+
+  //Ataca a otro personaje seleccionado
+  attack(target) {
+    console.log(`${this.name} deals ${this.damage} DMG to ${target.name}`);
+    target.health -= this.damage;
+  }
+
+  //Retorna la información actual del personaje
+  status() {
+    return `${this.name} - HP ${this.health}/${this.maxhealth}`;
+  }
+}
+
+//Función para combatir
+function fight(firstCharacter, secondCharacter) {
+  console.log("Empieza el combate!");
+  console.log(hero.status());
+  console.log(enemy.status());
+
+    document.addEventListener("keydown", function(event) {
+      if (event.keydown === "x") {
+        //Primer personaje ataca si esta vivo
+        if (firstCharacter.isAlive()) {
+          firstCharacter.attack(secondCharacter);
+          document.getElementById("health_" + secondCharacter.name).value = secondCharacter.health;
+          console.log(hero.status());
+          console.log(enemy.status());
+        } else {
+          console.log(`${firstCharacter.name} died!`);
+        }
+      } else if (event.keydown === "y") {
+        //Segundo personaje ataca si esta vivo
+          if (secondCharacter.isAlive()) {
+            secondCharacter.attack(firstCharacter);
+            document.getElementById("health_" + firstCharacter.name).setAttribute(value, firstCharacter.health);
+            document.getElementById("text_" + secondCharacter.name);
+            console.log(hero.status());
+            console.log(enemy.status());
+          } else {
+            console.log(`${secondCharacter.name} died!`);
+          }
+      }
+});
+
+//Creación de personajes
+const hero = new Character("Heroe", 100, 110);
+const enemy = new Character("Limo", 500, 40);
+
+//Comenzar combate
+fight(hero, enemy);
